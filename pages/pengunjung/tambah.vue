@@ -16,7 +16,7 @@
               <option v-for="(member, i) in members" :key="i" :value="member.id">{{ member.nama }}</option>
             </select>
           </div>
-          <div class="mb-3" v-if="form.keanggotaan === 1 ">
+          <div class="mb-3" v-if="form.keanggotaan === 1">
             <div class="row">
               <div class="col-md-4">
                 <select v-model="form.tingkat"
@@ -39,8 +39,7 @@
                 </select>
               </div>
               <div class="col-md-4">
-                <select v-model="form.kelas"
-                  class="form-control form-control-lg form-select rounded-3 mb-2 bg-primary">
+                <select v-model="form.kelas" class="form-control form-control-lg form-select rounded-3 mb-2 bg-primary">
                   <option value="">KELAS</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -63,7 +62,7 @@
       </div>
     </div>
     <nuxt-link to="/">
-      <button type="button" class="btn btn-dark bck mt-5">Kembali</button>
+      <button type="button" class="btn btn-dark bck mt-5 mb-5">Kembali</button>
     </nuxt-link>
   </div>
 </template>

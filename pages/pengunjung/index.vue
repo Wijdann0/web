@@ -32,7 +32,7 @@
       </div>
     </div>
     <nuxt-link to="/">
-      <button type="button" class="btn btn-dark bck mt-5">Kembali</button>
+      <button type="button" class="btn btn-dark bck mt-5 mb-5">Kembali</button>
     </nuxt-link>
   </div>
 </template>
