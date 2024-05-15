@@ -31,12 +31,27 @@
         </nuxt-link>
       </div>
     </div>
+    <div class="row">
+      <div class="col">
+        <h6>Daftar Pengunjung Saat Ini : {{ visitors.length }}</h6>
+      </div>
+    </div>
   </div>
 </template>
 
 <script setup>
 const supabase = useSupabaseClient()
-console.log(supabase)
+const visitors = ref ([])
+
+
+const getPengunjung = async () => {
+  const { data, error } = await supabase.from('pengunjung').select(`*, keanggotaan(*), keperluan(*)`)
+  if (data) visitors.value = data
+}
+
+onMounted(() => {
+  getPengunjung()
+})
 </script>
 
 <style scoped>
@@ -60,5 +75,9 @@ console.log(supabase)
 .card.bg-riwayat {
   background: url('../assets/img/riwayat.jpg') no-repeat center center;
   background-size: cover;
+}
+
+h2{
+  font-size: 40px;
 }
 </style>

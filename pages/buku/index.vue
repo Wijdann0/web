@@ -16,7 +16,7 @@
                 <div class="card-header" style="height: 250px;">
                   <img :src="book.cover" :alt="book.judul" style="width: 100%; height: 90%;">
                 </div>
-                <div class="card-body">
+                <div class="card-body jdl d-flex justify-content-center align-items-center text-decoration-none">
                   <h6>{{ book.judul }}</h6>
                 </div>
               </div>
@@ -50,6 +50,11 @@ button {
 img {
   width: 100%;
 }
+
+.jdl{
+  height: 100px;
+}
+
 </style>
 
 
