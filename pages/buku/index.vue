@@ -13,8 +13,8 @@
           <div v-for="(book, i) in books" :key="i" class="col-lg-2 d-flex justify-content-start">
             <nuxt-link :to="`/buku/${book.id}`">
               <div class="card mb-5" style="width: 200px;">
-                <div class="card-header" style="height: 250px;">
-                  <img :src="book.cover" :alt="book.judul" style="width: 100%; height: 90%;">
+                <div class="card-header d-flex justify-content-center" style="height: 250px;">
+                  <img :src="book.cover" :alt="book.judul" style="width: 100%; height: 100%;">
                 </div>
                 <div class="card-body jdl d-flex justify-content-center align-items-center text-decoration-none">
                   <h6>{{ book.judul }}</h6>
@@ -52,9 +52,11 @@ img {
 }
 
 .jdl{
-  height: 100px;
+  height: 50px;
 }
-
+h6{
+  font-size: 10px
+}
 </style>
 
 
